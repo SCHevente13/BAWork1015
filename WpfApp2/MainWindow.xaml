@@ -6,7 +6,83 @@
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
-        
-    </StackPanel>
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Foreground" Value="DarkSlateBlue"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Background" Value="AliceBlue"/>
+            <Setter Property="BorderBrush" Value="SteelBlue"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="160"/>
+            <Setter Property="Height" Value="45"/>
+            <Setter Property="Background" Value="DarkSlateGray"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="8"/>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Width" Value="230"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Background" Value="LightCyan"/>
+            <Setter Property="BorderBrush" Value="Teal"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Name: " Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
+        <Label Content="Age: " Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
+        <Label Content="Home: " Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
+        <Label Content="Phone Number: " Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
+        <TextBox Text="Name: " Grid.Column="2" Grid.ColumnSpan="2"/>
+        <TextBox Text="Age: " Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <TextBox Text="Home: " Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <TextBox Text="Phone Number: " Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Button Content="Save" Grid.Column="4" Grid.ColumnSpan="2"/>
+        <Button Content="Modify" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2"/>
+        <Button Content="Delete" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2"/>
+        <Button Content="Quit" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="2"/>
+        <ComboBox Grid.Row="4" Grid.ColumnSpan="2">
+            <ComboBoxItem Content="Python"/>
+            <ComboBoxItem Content="C#"/>
+            <ComboBoxItem Content="JavaScript"/>
+        </ComboBox>
+        <ComboBox Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2">
+            <ComboBoxItem Content="MySQL"/>
+            <ComboBoxItem Content="PostgreSQL"/>
+            <ComboBoxItem Content="SQLite"/>
+        </ComboBox>
+        <ComboBox Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="2">
+            <ComboBoxItem Content="Math"/>
+            <ComboBoxItem Content="IT"/>
+            <ComboBoxItem Content="English"/>
+        </ComboBox>
+    </Grid>
 </Window>
